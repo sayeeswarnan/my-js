@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+        }
+#box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+    width: 300px;
+    height: 200px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+button{
+    font-size: 2rem;
+    margin-top: 2%;
+    border-radius: 5%;
+}
+button:hover{
+    border-radius: 6%;
+    background-color: tomato;
+    box-shadow: 0cap;
+}
+    </style>
+</head>
+<body>
+    <div id="box">
+        <p>hover  me using button 🙂</p>
+    </div>
+    <button id="button">Click me</button>
+    <script>
+        const box = document.getElementById("box");
+        const button = document.getElementById("button");
+
+        button.addEventListener("mouseover",event=>{
+            box.style.backgroundColor = "tomato";
+            box.style. borderRadius = "5%";
+            box.textContent = "warn you don't click me 😥"
+        });
+        button.addEventListener("mouseout",event=>{
+            box.style.backgroundColor = "white";
+            box.textContent = "hover  me using button 🙂";
+            box.style. borderRadius = "1px";
+        });
+        button.addEventListener("click",event=>{
+            box.style.backgroundColor = "green";
+            box.textContent = "i told you ☠️";
+        });
+    </script>
+</body>
+</html>

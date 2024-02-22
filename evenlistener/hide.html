@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+#mybutton{
+    font-size: 2rem;
+    margin-bottom: 3px;
+}
+    </style>
+</head>
+<body>
+    <button id="mybutton">hide</button><br>
+    <img id="img" src="./download.jpg" alt="" width="200px"><br>
+   
+    <script>
+const mybutton = document.getElementById("mybutton");
+const image  = document.getElementById("img");
+mybutton.addEventListener("click",event=>{
+    if(image.style.display === "none"){
+        image.style.display = "block";
+        mybutton.textContent = "Hide";
+    }
+    else{
+    image.style.display = "none";
+    mybutton.textContent = "show";}
+});
+    </script>
+</body>
+</html>
