@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            
+            padding: 5px 5px 5px 5px;
+        }
+    </style>
+</head>
+<body>
+
+   <button onclick="settime()">start</button>
+   <button onclick="cleartime()">clear</button>
+
+    <script>
+        let clear;
+   function settime(){
+   clear = setTimeout(()=>window.alert("Alapara starting frnds"),2000);
+   console.log("Alapara starting frnds");
+   }
+
+   function cleartime(){
+    clearTimeout(clear);
+    console.log("Alapara ending frns");
+   
+
+   }
+    </script>
+</body>
+</html>
